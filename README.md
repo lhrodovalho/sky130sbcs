@@ -1,4 +1,4 @@
-An <b>Ultra-Low-Power Analog Front-End for Bio-Signals</b> intended to be integrated for the SSCS Platform for IC Design Outreach (PICO) Open-Source Design Contest. </br>
+A <b>resistorless self-biased current source</b> intended to be integrated in the efabless MPW4. </br>
 
 
 Table of contents
