@@ -5,30 +5,18 @@ Table of contents
 ==============================
 <!--ts-->
   * [Summary](#Summary)
-    * [Motivation](#Motivation)
   * [Description](#Description)
-    * [Block Diagram](#Block-Diagram)
     * [Schematics and Layouts](#Schematics-and-Layouts)
     * [Simulation Results](#Simulation-Results)
-    * [Target Performance Summary](#Target-Performance-Summary)
   * [Team Members](#Team-Members)  
   * [References](#References)
 <!--te-->
 
 ---
-Description
-===========
+Summary
+=======
 
----
-![image](./docs/circuits/sbcs.png)
-
-Self-biased current source circuit diagram
-
-### Simulation Results
-
-### TT corner
-![image](./docs/plots/vdd_tt_io.png)
-![image](./docs/plots/vdd_tt_psrr.png)
+A resistorless self-biased current source based on [1] using series-parallel current mirrors [2]
 
 ### Target Performance Summary
 
@@ -40,8 +28,21 @@ Self-biased current source circuit diagram
 | Temperature stability | 1.0 %/V                      |
 | Supply stability      | 3000 ppm/°C                  |
 
-Summary
-=======
+---
+Description
+===========
+
+### Schematics and Layouts
+---
+![image](./docs/circuits/sbcs.png)
+
+Self-biased current source circuit diagram
+
+### Simulation Results
+
+#### TT corner
+![image](./docs/plots/vdd_tt_io.png)
+![image](./docs/plots/vdd_tt_psrr.png)
 
 Status and Issues
 ============
@@ -53,4 +54,12 @@ Team members
 
 **Ph.D. Luís Henrique Rodovalho (Rodovalho)**
 | [luishenriquerodovalho@gmail.com](mailto:luishenriquerodovalho@gmail.com?subject=Hi% "Hi!") <img width="15" src="https://cdn-icons-png.flaticon.com/128/2089/2089181.png" alt="email"> | 
+
+References
+==========
+
+[1] Serra-Graells, Francisco, and Jose Luis Huertas. "Sub-1-V CMOS proportional-to-absolute temperature references." IEEE Journal of Solid-State Circuits 38.1 (2003): 84-88.
+
+[2] Arnaud, Alfredo, Rafaella Fiorelli, and Carlos Galup-Montoro. "Nanowatt, sub-nS OTAs, with sub-10-mV input offset, using series-parallel current mirrors." IEEE Journal of Solid-State Circuits 41.9 (2006): 2009-2018.
+
 
