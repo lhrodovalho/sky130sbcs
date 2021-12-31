@@ -36,14 +36,17 @@ Description
 ### Schematics and Layouts
 ---
 ![image](./docs/circuits/sbcs.png)
+![image](./docs/layouts/sbcs.png)
 
 Self-biased current source circuit diagram
 
 ### Simulation Results
 
 #### TT corner
-![image](./docs/plots/vdd_tt_io.png)
-![image](./docs/plots/vdd_tt_psrr.png)
+![image](./docs/plots/tt_dc_vdd_io.png)
+![image](./docs/plots/tt_dc_vdd_psrr.png)
+![image](./docs/plots/tt_dc_temp_io.png)
+![image](./docs/plots/tt_tran_io.png)
 
 Status and Issues
 ============
