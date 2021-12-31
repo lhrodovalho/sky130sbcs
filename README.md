@@ -45,7 +45,7 @@ Self-biased current source circuit diagram
 #### TT corner
 ![image](./docs/plots/tt_dc_vdd_io.png)
 ![image](./docs/plots/tt_dc_vdd_psrr.png)
-![image](./docs/plots/tt_dc_temp_io.png)
+![image](./docs/plots/tt_temp_io.png)
 ![image](./docs/plots/tt_tran_io.png)
 
 Status and Issues
