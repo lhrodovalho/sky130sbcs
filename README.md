@@ -25,8 +25,9 @@ A resistorless self-biased current source based on [1] using series-parallel cur
 | VDD                   | 1.0-1.8 V                    |
 | Total current         | 3.50 &mu;A                   |
 | Output current        | 0.27 &mu;A                   |
-| Temperature stability | 1.0 %/V                      |
-| Supply stability      | 3000 ppm/°C                  |
+| Temperature stability | 0.5 %/V                      |
+| Supply stability      | 1160 ppm/°C                  |
+| Area                  | 100 x 60 &mu;m²              |
 
 ---
 Description
