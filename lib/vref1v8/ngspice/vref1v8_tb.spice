@@ -1,0 +1,35 @@
+* 1.8 V CMOS only voltage reference testbench
+
+* Include SkyWater sky130 device models
+.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.param mc_mm_switch=0
+
+.include "../mag/vref1v8.spice"
+.include "../../sbcs1v8/mag/sbcs1v8.spice"
+
+* supply voltages
+vdda	vdda 0 1.8
+vssa	vssa 0 0.0
+
+* DUT
+x0 io vdda vssa x sbcs1v8
+vo io ii 0.0
+
+x1 ii x ref vssa vref1v8
+*x2 ii x ref vssa vref1v8
+
+.option gmin=1e-12
+.control
+  dc vdda 10m 1.95 10m
+  plot x ref
+  plot i(vo)
+  plot abs(deriv(ref)/ref) ylog
+  
+  dc temp -40 125 1
+  meas dc r27 find ref at=27
+  let refN = ref/r27
+  plot refN
+  
+.endc
+
+.end

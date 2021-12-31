@@ -1,0 +1,25 @@
+* Self-biased current source testbench
+
+* Include SkyWater sky130 device models
+.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.param mc_mm_switch=0
+
+.include "../mag/ESD.spice"
+
+* supply voltages
+vdda	vdda 0 3.3
+vssa	vssa 0 0.0
+
+* DUT
+va a vssa 0.0
+*x0 a b vdda vssa ESD
+
+.option gmin=1e-13
+.control
+
+  dc va -11 11 100m
+  plot i(va)
+
+.endc
+
+.end

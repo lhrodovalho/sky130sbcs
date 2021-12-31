@@ -1,0 +1,10 @@
+* NGSPICE file created from ESD.ext - technology: sky130A
+
+.subckt ESD a b vdda vssa
+D0 b vdda sky130_fd_pr__diode_pd2nw_05v5 pj=1.12e+07u area=7.84e+12p
+D1 vssa b sky130_fd_pr__diode_pw2nd_05v5 pj=1.12e+07u area=7.84e+12p
+D2 a vdda sky130_fd_pr__diode_pd2nw_05v5 pj=1.12e+07u area=7.84e+12p
+D3 vssa a sky130_fd_pr__diode_pw2nd_05v5 pj=1.12e+07u area=7.84e+12p
+X0 a b vssa sky130_fd_pr__res_high_po w=1.2e+06u l=4.4e+06u
+.ends
+
