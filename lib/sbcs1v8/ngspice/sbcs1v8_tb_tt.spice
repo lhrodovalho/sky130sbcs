@@ -1,0 +1,47 @@
+* Self-biased current source testbench - TT corner
+
+* Include SkyWater sky130 device models
+.lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+.param mc_mm_switch=0
+
+.include "../mag/sbcs1v8.spice"
+
+* supply voltages
+vdda	vdda 0 1.8 pulse(10m 1.8 0 1u 10u 10 1)
+vssa	vssa 0 0.0
+
+* DUT
+x0 io vdda vssa x sbcs1v8
+vo io vssa 0.0
+
+.option gmin=1e-13
+.control
+  dc vdda 10m 1.8 10m
+  let dc_vdd_io = i(vo)
+  plot dc_vdd_io ylimit 0 500n
+  wrdata ../data/tt_dc_vdd_io.txt dc_vdd_io
+  let psrr = abs(deriv(i(vo))/i(vo))
+  plot dc_vdd_psrr ylog
+  wrdata ../data/tt_dc_vdd_psrr.txt dc_vdd_psrr
+  
+  
+  dc temp -40 125 1
+  let dc_temp_io = i(vo)
+  plot dc_temp_io ylimit 220n 360n
+  wrdata ../data/tt_dc_temp_io.txt dc_temp_io
+  
+  tran 100n 20u
+  let tran_io = i(vo)
+  plot tran_io ylimit 0 1u
+  plot vdda
+  wrdata ../data/tt_tran_io.txt tran_io
+  wrdata ../data/tt_tran_vdda.txt vdda
+  
+  reset
+  op
+  print i(vdda)
+  print i(vo)
+  
+.endc
+
+.end
