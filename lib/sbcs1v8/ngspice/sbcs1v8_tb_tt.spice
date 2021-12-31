@@ -20,7 +20,7 @@ vo io vssa 0.0
   let dc_vdd_io = i(vo)
   plot dc_vdd_io ylimit 0 500n
   wrdata ../data/tt_dc_vdd_io.txt dc_vdd_io
-  let psrr = abs(deriv(i(vo))/i(vo))
+  let dc_vdd_psrr = abs(deriv(i(vo))/i(vo))
   plot dc_vdd_psrr ylog
   wrdata ../data/tt_dc_vdd_psrr.txt dc_vdd_psrr
   

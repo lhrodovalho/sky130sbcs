@@ -1,4 +1,4 @@
-* Self-biased current source testbench - SS corner
+* Self-biased current source testbench - FF corner
 
 * Include SkyWater sky130 device models
 .lib "/usr/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice" ff
@@ -20,7 +20,7 @@ vo io vssa 0.0
   let dc_vdd_io = i(vo)
   plot dc_vdd_io ylimit 0 500n
   wrdata ../data/ff_dc_vdd_io.txt dc_vdd_io
-  let psrr = abs(deriv(i(vo))/i(vo))
+  let dc_vdd_psrr = abs(deriv(i(vo))/i(vo))
   plot dc_vdd_psrr ylog
   wrdata ../data/ff_dc_vdd_psrr.txt dc_vdd_psrr
   
