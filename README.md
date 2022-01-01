@@ -51,6 +51,9 @@ Self-biased current source circuit diagram
 Status and Issues
 ============
 
+* There are no schematics. All simulations are from extracted netlists.
+* This project also contains a CMOS only voltage reference based on the main current-source, but there is no documentation available.
+* There is a second version of the same current source, but using high-voltage transistors. Only the layer types were replaced.
 * Documentation is extremely incomplete.
 
 Team members
