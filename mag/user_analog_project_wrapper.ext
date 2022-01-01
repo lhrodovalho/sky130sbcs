@@ -1,4 +1,4 @@
-timestamp 1641013539
+timestamp 1641015273
 version 8.3
 tech sky130A
 style ngspice()
@@ -696,8 +696,8 @@ port "wbs_ack_o" 574 2888 -800 3000 480 m2
 port "wb_rst_i" 573 1706 -800 1818 480 m2
 port "wb_clk_i" 572 524 -800 636 480 m2
 port "vssa2" 567 0 549442 1660 554242 m3
-port "io_analog[1]" 38 566594 702300 571594 704800 m3
 port "gpio_analog[7]" 15 -800 511530 480 511642 m3
+port "io_analog[1]" 38 566594 702300 571594 704800 m3
 node "c_n100_n100#" 0 0 -100 -100 comment 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "io_analog[4]" 0 2925 329294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
 node "io_analog[4]" 0 2925 318994 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
@@ -872,7 +872,7 @@ node "io_in_3v3[14]" 1 613.728 -800 509166 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "gpio_noesd[7]" 1 613.728 -800 510348 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "vdda2" 0 172056 0 214888 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 136500800 640160 0 0 0 0 0 0
 node "m3_4800_550000#" 0 164 4800 550000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0
-node "vssa2" 0 6529.6 0 559442 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11816000 14560 0 0 0 0 0 0
+node "vssa2" 0 6519 0 559442 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "m3_6400_574320#" 0 136.96 6400 574320 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19200 640 0 0 0 0 0 0
 node "vccd2" 0 67524.7 0 633842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46664000 189600 13184000 69440 0 0 0 0
 node "vccd2" 0 6519 0 643842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
@@ -1390,43 +1390,48 @@ node "wbs_cyc_i" 1 631.648 4070 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "wbs_ack_o" 1 631.648 2888 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_rst_i" 1 631.648 1706 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_clk_i" 1 631.648 524 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
-node "vssa2" 0 593697 0 549442 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 206595200 1036400 83304000 391360 206595200 1036400 0 0 0 0
+node "vssa2" 0 593676 0 549442 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 206595200 1036400 83288000 391280 206595200 1036400 0 0 0 0
+node "gpio_analog[7]" 0 24491.7 -800 511530 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2726400 68480 3326240 82484 0 0 0 0 0 0
 node "io_analog[1]" 36 17771.5 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1811200 45440 12793920 22508 0 0 0 0 0 0
-node "gpio_analog[7]" 0 256789 -800 511530 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5715200 285760 15795200 433920 16224000 437440 15686400 430720 0 0 0 0
+node "m1_800_511360#" 0 231742 800 511360 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5696000 284800 13036800 364640 12851200 354240 15654400 429920 0 0 0 0
 node "m1_543720_703240#" 0 78515.6 543720 703240 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1804800 90240 4275200 110400 5024000 148160 6080000 155680 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "io_analog[4]" "io_analog[4]" 26250
-cap "io_clamp_high[1]" "io_analog[5]" 525
-cap "vssa2" "m3_4800_550000#" 1132
-cap "io_clamp_low[2]" "io_analog[6]" 525
-cap "io_analog[4]" "io_analog[4]" 21250
-cap "io_analog[6]" "io_analog[6]" 21250
-cap "gpio_analog[7]" "vssa2" 3960.75
-cap "m1_543720_703240#" "io_analog[1]" 53622.6
-cap "io_analog[10]" "vccd2" 792
-cap "io_analog[6]" "io_analog[6]" 21250
-cap "io_analog[5]" "io_analog[5]" 21250
-cap "vssa2" "vccd2" 1703.67
-cap "io_analog[5]" "io_analog[5]" 21250
-cap "io_analog[5]" "io_analog[5]" 26250
-cap "io_clamp_high[2]" "io_analog[6]" 525
-cap "io_analog[4]" "io_analog[4]" 26250
-cap "io_clamp_high[1]" "io_clamp_low[1]" 525
-cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_analog[5]" "io_analog[5]" 26250
-cap "io_clamp_low[1]" "io_analog[5]" 525
-cap "vdda2" "gpio_analog[7]" 2899.2
 cap "vi" "vssa2" 2611.2
-cap "io_analog[10]" "vssa2" 1562
-cap "vi" "ii" 252
+cap "m1_800_511360#" "gpio_analog[7]" 177161
+cap "vssa2" "gpio_analog[7]" 842.5
+cap "m1_800_511360#" "vdda2" 2598.4
 cap "io_analog[6]" "io_analog[6]" 26250
-cap "vssa2" "ii" 2611.2
-cap "io_clamp_high[0]" "io_clamp_low[0]" 525
+cap "ii" "vssa2" 2611.2
+cap "io_analog[6]" "io_analog[6]" 26250
+cap "io_clamp_low[2]" "io_analog[6]" 525
+cap "m3_4800_550000#" "vssa2" 1132
 cap "io_analog[4]" "io_analog[4]" 21250
-cap "io_clamp_high[2]" "io_clamp_low[2]" 525
-cap "gpio_analog[7]" "vccd2" 2224.33
-cap "io_analog[4]" "io_clamp_low[0]" 525
+cap "vccd2" "io_analog[10]" 792
+cap "io_analog[4]" "io_analog[4]" 21250
+cap "m1_800_511360#" "vssa2" 3118.25
+cap "io_analog[5]" "io_analog[5]" 21250
+cap "io_analog[5]" "io_analog[5]" 21250
+cap "vccd2" "gpio_analog[7]" 296
+cap "io_clamp_high[1]" "io_analog[5]" 525
+cap "io_analog[6]" "io_analog[6]" 21250
+cap "io_analog[5]" "io_analog[5]" 26250
+cap "io_analog[5]" "io_analog[5]" 26250
+cap "io_clamp_low[0]" "io_clamp_high[0]" 525
+cap "io_analog[1]" "m1_543720_703240#" 53622.6
 cap "io_clamp_high[0]" "io_analog[4]" 525
+cap "io_analog[6]" "io_analog[6]" 21250
+cap "io_analog[5]" "io_clamp_low[1]" 525
+cap "io_analog[4]" "io_analog[4]" 26250
+cap "vi" "ii" 252
+cap "io_analog[4]" "io_clamp_low[0]" 525
+cap "vdda2" "gpio_analog[7]" 300.8
+cap "io_clamp_high[1]" "io_clamp_low[1]" 525
+cap "vssa2" "io_analog[10]" 1562
+cap "m1_800_511360#" "vccd2" 1928.33
+cap "vssa2" "vccd2" 1703.67
+cap "io_analog[4]" "io_analog[4]" 26250
+cap "io_clamp_high[2]" "io_analog[6]" 525
+cap "io_clamp_high[2]" "io_clamp_low[2]" 525
 subcap "wb_clk_i" -296.744
 subcap "wb_clk_i" -334.904
 subcap "wbs_sel_i[1]" -264.308
@@ -1599,106 +1604,108 @@ subcap "io_in_3v3[12]" -200.4
 subcap "io_in[12]" -200.4
 subcap "io_out[12]" -200.4
 subcap "io_oeb[12]" -200.4
-subcap "gpio_analog[7]" -256432
-subcap "gpio_analog[7]" -256493
-cap "sbcs1v8_0/p0" "sbcs1v8_0/vdda" 63
+subcap "gpio_analog[7]" -24173.8
+subcap "gpio_analog[7]" -24196
+cap "sbcs1v8_0/vdda" "sbcs1v8_0/p0" 63
 cap "sbcs1v8_0/s" "sbcs1v8_0/vdda" 63
 cap "sbcs1v8_0/p1" "sbcs1v8_0/vdda" 63
-cap "sbcs1v8_0/vdda" "sbcs1v8_0/p2" 63
+cap "sbcs1v8_0/p2" "sbcs1v8_0/vdda" 63
 cap "sbcs1v8_0/vdda" "sbcs1v8_0/p0" 9
 cap "sbcs1v8_0/vdda" "sbcs1v8_0/s" 9
-cap "sbcs1v8_0/vdda" "sbcs1v8_0/p1" 9
 cap "sbcs1v8_0/p2" "sbcs1v8_0/vdda" 9
+cap "sbcs1v8_0/p1" "sbcs1v8_0/vdda" 9
 subcap "vdda1" -6207.19
-subcap "vssa2" -593051
-cap "sbcs1v8_0/vdda" "vssa2" 125
+subcap "vssa2" -593030
 cap "sbcs1v8_0/vdda" "vssa2" 167.5
+cap "sbcs1v8_0/vdda" "vssa2" 125
 cap "vssa2" "sbcs1v8_0/vssa" 116.667
 cap "vssa2" "sbcs1v8_0/vssa" 156.333
-cap "vssa2" "sbcs1v8_0/vdda" 158.333
-cap "vssa2" "sbcs1v8_0/vdda" 212.167
+cap "sbcs1v8_0/vdda" "vssa2" 212.167
+cap "sbcs1v8_0/vdda" "vssa2" 158.333
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
 cap "sbcs1v8_0/vssa" "vssa2" 291.667
 cap "vssa2" "sbcs1v8_0/vssa" 390.833
 cap "sbcs1v8_0/vssa" "vssa2" 291.667
 cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "vssa2" "sbcs1v8_0/vssa" 291.667
-cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "sbcs1v8_0/vssa" "vssa2" 291.667
-cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "vssa2" "sbcs1v8_0/vssa" 390.833
-cap "vssa2" "sbcs1v8_0/vssa" 291.667
 cap "sbcs1v8_0/vssa" "vssa2" 390.833
 cap "vssa2" "sbcs1v8_0/vssa" 291.667
-cap "vssa2" "sbcs1v8_0/vssa" 390.833
-cap "vssa2" "sbcs1v8_0/vssa" 291.667
-cap "vssa2" "sbcs1v8_0/vssa" 291.667
-cap "vssa2" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "sbcs1v8_0/vssa" "vssa2" 291.667
-cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "sbcs1v8_0/vssa" "vssa2" 291.667
-cap "vssa2" "sbcs1v8_0/vssa" 291.667
-cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "sbcs1v8_0/vssa" "vssa2" 291.667
-cap "sbcs1v8_0/vssa" "vssa2" 390.833
-cap "sbcs1v8_0/vssa" "vssa2" 291.667
 cap "sbcs1v8_0/n" "sbcs1v8_0/vssa" 31.5
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_0/io" "sbcs1v8_0/vssa" 4.54747e-13
 cap "vssa2" "sbcs1v8_0/vssa" 390.833
 cap "sbcs1v8_0/n" "sbcs1v8_0/vssa" 31.5
-cap "vssa2" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "sbcs1v8_0/io" 4.54747e-13
-cap "sbcs1v8_0/vssa" "sbcs1v8_0/io" -5.68434e-14
 cap "sbcs1v8_0/vssa" "vssa2" 33.5
+cap "sbcs1v8_0/io" "sbcs1v8_0/vssa" -5.68434e-14
+cap "vref1v8_0/vo" "vref1v8_0/vssa" 50
 cap "sbcs1v8_1/vdda" "gpio_analog[7]" -7.10543e-15
-cap "sbcs1v8_1/vdda" "vssa2" 250
-cap "sbcs1v8_1/vdda" "vssa2" 335
-cap "sbcs1v8_1/vdda" "vssa2" 44.6667
-cap "sbcs1v8_1/vssa" "vssa2" 241.667
-cap "sbcs1v8_1/vdda" "vssa2" 33.3333
+cap "vssa2" "sbcs1v8_1/vdda" 335
+cap "vref1v8_0/vo" "vref1v8_0/vssa" 116.667
+cap "vssa2" "sbcs1v8_1/vdda" 250
+cap "vssa2" "sbcs1v8_1/vdda" 44.6667
 cap "vssa2" "sbcs1v8_1/vssa" 323.833
+cap "vssa2" "sbcs1v8_1/vdda" 33.3333
+cap "sbcs1v8_1/vssa" "vssa2" 241.667
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
 cap "vssa2" "sbcs1v8_1/vssa" 390.833
 cap "sbcs1v8_1/vssa" "vssa2" 291.667
 cap "vssa2" "sbcs1v8_1/vssa" 390.833
-cap "vssa2" "sbcs1v8_1/vssa" 291.667
-cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
 cap "sbcs1v8_1/vssa" "vssa2" 291.667
-cap "vssa2" "sbcs1v8_1/vssa" 390.833
-cap "vssa2" "sbcs1v8_1/vssa" 291.667
-cap "vssa2" "sbcs1v8_1/vssa" 291.667
-cap "vssa2" "sbcs1v8_1/vssa" 390.833
 cap "vssa2" "sbcs1v8_1/vssa" 390.833
 cap "vssa2" "sbcs1v8_1/vssa" 291.667
 cap "sbcs1v8_1/vssa" "vssa2" 390.833
 cap "vssa2" "sbcs1v8_1/vssa" 291.667
-cap "sbcs1v8_1/vssa" "vssa2" 390.833
-cap "sbcs1v8_1/vssa" "vssa2" 291.667
 cap "vssa2" "sbcs1v8_1/vssa" 390.833
-cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
 cap "vssa2" "sbcs1v8_1/vssa" 291.667
 cap "sbcs1v8_1/vssa" "vssa2" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
 cap "vssa2" "sbcs1v8_1/vssa" 291.667
 cap "sbcs1v8_1/vssa" "vssa2" 390.833
 cap "sbcs1v8_1/vssa" "vssa2" 291.667
-cap "vssa2" "sbcs1v8_1/vssa" 390.833
-cap "vssa2" "sbcs1v8_1/vssa" 390.833
 cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
 subcap "vi" -357.6
-cap "vssa2" "vref1v8_0/vssa" 390.833
 cap "sbcs1v8_1/n" "vref1v8_0/vssa" 63
-cap "vssa2" "sbcs1v8_1/vssa" 256.833
+cap "vref1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_1/vssa" "vref1v8_0/ii" -1.36424e-12
+cap "sbcs1v8_1/vssa" "vssa2" 256.833
 cap "vref1v8_0/vi" "sbcs1v8_1/vssa" -1.36424e-12
-cap "vref1v8_0/ii" "sbcs1v8_1/vssa" -1.36424e-12
 subcap "vdda1" -103659
-cap "vref1v8_0/vssa" "vref1v8_0/vo" 4.26326e-14
-cap "vref1v8_0/vo" "vref1v8_0/vssa" 3.90799e-14
-cap "vref1v8_0/vo" "vref1v8_0/n" 63
+cap "vref1v8_0/vo" "vref1v8_0/vssa" 29
+cap "vref1v8_0/n" "vref1v8_0/vssa" 63
+cap "vref1v8_0/vo" "vref1v8_0/vssa" 95.6667
 cap "vref1v8_0/vssa" "vref1v8_0/vssa" 18
 cap "vref1v8_0/vssa" "vref1v8_0/vi" 126
-cap "vref1v8_0/vi" "vref1v8_0/ii" 1.42109e-14
-cap "vref1v8_0/vssa" "vref1v8_0/ii" 126
+cap "vref1v8_0/ii" "vref1v8_0/vi" 1.42109e-14
+cap "vref1v8_0/ii" "vref1v8_0/vssa" 126
 subcap "vdda1" -103326
-subcap "vssa2" -5960.77
+subcap "vssa2" -5950.17
 subcap "gpio_analog[6]" -200.4
 subcap "gpio_noesd[6]" -200.4
 subcap "io_in_3v3[13]" -200.4
@@ -1710,24 +1717,24 @@ subcap "vccd1" -6054.85
 subcap "vccd2" -67032.9
 subcap "vccd1" -6135.45
 subcap "vccd2" -6104.17
-cap "sbcs5v0_0/s" "sbcs5v0_0/vdda" 63
-cap "sbcs5v0_0/p0" "sbcs5v0_0/vdda" 63
+cap "sbcs5v0_0/vdda" "sbcs5v0_0/s" 63
+cap "sbcs5v0_0/vdda" "sbcs5v0_0/p0" 63
 subcap "io_analog[0]" -6591.86
 subcap "io_analog[0]" -6244
 subcap "io_analog[10]" -89632.2
-cap "sbcs5v0_0/vdda" "vssa2" 14
+cap "vssa2" "sbcs5v0_0/vdda" 14
 cap "vssa2" "sbcs5v0_0/vdda" 14
 cap "vssa2" "sbcs5v0_0/s" 14
-cap "vssa2" "sbcs5v0_0/p1" 14
-cap "vssa2" "sbcs5v0_0/vdda" 14
 cap "vssa2" "sbcs5v0_0/vdda" 14
 cap "vssa2" "sbcs5v0_0/p2" 14
-cap "vssa2" "sbcs5v0_0/p0" 14
+cap "sbcs5v0_0/p1" "vssa2" 14
+cap "sbcs5v0_0/p0" "vssa2" 14
+cap "sbcs5v0_0/vdda" "vssa2" 14
 cap "vssa2" "sbcs5v0_0/vdda" 14
+cap "sbcs5v0_0/io" "sbcs5v0_0/vssa" 2.84217e-14
 cap "sbcs5v0_0/vssa" "sbcs5v0_0/n" 126
-cap "sbcs5v0_0/vssa" "sbcs5v0_0/z" 63
-cap "sbcs5v0_0/vssa" "sbcs5v0_0/io" 2.84217e-14
-cap "sbcs5v0_0/vssa" "sbcs5v0_0/io" 1.36424e-12
+cap "sbcs5v0_0/z" "sbcs5v0_0/vssa" 63
+cap "sbcs5v0_0/io" "sbcs5v0_0/vssa" 1.36424e-12
 subcap "io_analog[9]" -5957.47
 subcap "io_analog[8]" -6061.29
 subcap "io_analog[7]" -6168.29
@@ -1775,10 +1782,9 @@ subcap "io_analog[1]" -17007.8
 merge "sbcs5v0_0/vdda" "vdda1" -583.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -138000 -2642 0 0 0 0 0 0
 merge "sbcs1v8_1/io" "vref1v8_0/ii" -98.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -480 0 0 0 0 0 0
 merge "vref1v8_0/ii" "ii"
-merge "sbcs5v0_0/vssa" "vref1v8_0/vo" 87.9437 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 0 319439 -800 322560 0 0 0 0 0
-merge "vref1v8_0/vo" "vref1v8_0/vssa"
-merge "vref1v8_0/vssa" "gpio_analog[7]"
-merge "gpio_analog[7]" "sbcs1v8_1/vssa"
+merge "sbcs5v0_0/vssa" "vref1v8_0/vssa" 87.9437 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 0 319439 -800 322560 0 0 0 0 0
+merge "vref1v8_0/vssa" "m1_800_511360#"
+merge "m1_800_511360#" "sbcs1v8_1/vssa"
 merge "sbcs1v8_1/vssa" "sbcs1v8_0/vssa"
 merge "sbcs1v8_0/vssa" "VSUBS"
 merge "VSUBS" "vssa2"
@@ -1789,3 +1795,4 @@ merge "sbcs1v8_1/x" "vref1v8_0/vi" -98.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 merge "vref1v8_0/vi" "vi"
 merge "sbcs1v8_0/io" "io_analog[10]" -5329.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8500000 -13560 0 0 0 0 0 0
 merge "sbcs5v0_0/io" "io_analog[1]" -6890.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12500000 -15320 0 0 0 0 0 0
+merge "vref1v8_0/vo" "gpio_analog[7]" -485.338 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4600 -3202 0 0 0 0 0 0
