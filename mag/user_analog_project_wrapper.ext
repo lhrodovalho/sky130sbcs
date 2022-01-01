@@ -1,13 +1,13 @@
-timestamp 1640965787
+timestamp 1641011891
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 2200000 3050000 1700000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12200 125 125 47 47 29 5
-use ESD ESD_0 1 0 36480 0 1 555840
-use vref1v8 vref1v8_0 -1 0 56080 0 -1 552960
+use sbcs5v0 sbcs5v0_0 1 0 524040 0 1 688760
 use sbcs1v8 sbcs1v8_1 1 0 37440 0 1 538560
 use sbcs1v8 sbcs1v8_0 1 0 8640 0 1 538560
+use vref1v8 vref1v8_0 -1 0 56080 0 -1 552960
 port "io_analog[4]" 41 329294 702300 334294 704800 m5
 port "io_analog[4]" 47 318994 702300 323994 704800 m5
 port "io_analog[5]" 42 227594 702300 232594 704800 m5
@@ -125,6 +125,7 @@ port "io_in_3v3[12]" 86 583520 496504 584800 496616 m3
 port "io_in[12]" 59 583520 497686 584800 497798 m3
 port "io_out[12]" 140 583520 498868 584800 498980 m3
 port "io_oeb[12]" 113 583520 500050 584800 500162 m3
+port "vdda1" 556 582340 540562 584800 545362 m3
 port "io_oeb[20]" 122 -800 246488 480 246600 m3
 port "io_out[20]" 149 -800 247670 480 247782 m3
 port "io_in[20]" 68 -800 248852 480 248964 m3
@@ -166,9 +167,7 @@ port "io_out[14]" 142 -800 506802 480 506914 m3
 port "io_in[14]" 61 -800 507984 480 508096 m3
 port "io_in_3v3[14]" 88 -800 509166 480 509278 m3
 port "gpio_noesd[7]" 33 -800 510348 480 510460 m3
-port "gpio_analog[7]" 15 -800 511530 480 511642 m3
-port "vdda1" 556 582340 540562 584800 545362 m3
-port "vdda1" 557 582340 550562 584800 555362 m3
+port "vdda2" 561 0 214888 1660 219688 m3
 port "gpio_analog[6]" 14 583520 583562 584800 583674 m3
 port "gpio_noesd[6]" 32 583520 584744 584800 584856 m3
 port "io_in_3v3[13]" 87 583520 585926 584800 586038 m3
@@ -177,8 +176,12 @@ port "io_out[13]" 141 583520 588290 584800 588402 m3
 port "io_oeb[13]" 114 583520 589472 584800 589584 m3
 port "vccd1" 553 582340 629784 584800 634584 m3
 port "vccd1" 552 582340 639784 584800 644584 m3
+port "vdda1" 557 582340 550562 584800 555362 m3
 port "io_analog[0]" 36 582300 677984 584800 682984 m3
-port "io_analog[1]" 38 566594 702300 571594 704800 m3
+port "vssa2" 566 0 559442 1660 564242 m3
+port "vccd2" 555 0 633842 1660 638642 m3
+port "vccd2" 554 0 643842 1660 648642 m3
+port "io_analog[10]" 37 0 680242 1700 685242 m3
 port "vssa1" 562 520594 702340 525394 704800 m3
 port "vssa1" 563 510594 702340 515394 704800 m3
 port "io_analog[2]" 39 465394 702300 470394 704800 m3
@@ -197,11 +200,7 @@ port "io_clamp_low[2]" 55 170894 702300 173094 704800 m3
 port "io_analog[6]" 49 165594 702300 170594 704800 m3
 port "io_analog[7]" 44 120194 702300 125194 704800 m3
 port "io_analog[8]" 45 68194 702300 73194 704800 m3
-port "vdda2" 561 0 214888 1660 219688 m3
-port "vssa2" 566 0 559442 1660 564242 m3
-port "vccd2" 555 0 633842 1660 638642 m3
-port "vccd2" 554 0 643842 1660 648642 m3
-port "io_analog[10]" 37 0 680242 1700 685242 m3
+port "io_analog[9]" 46 16194 702300 21194 704800 m3
 port "user_irq[2]" 551 583250 -800 583362 480 m2
 port "user_irq[1]" 550 582068 -800 582180 480 m2
 port "user_irq[0]" 549 580886 -800 580998 480 m2
@@ -697,7 +696,8 @@ port "wbs_ack_o" 574 2888 -800 3000 480 m2
 port "wb_rst_i" 573 1706 -800 1818 480 m2
 port "wb_clk_i" 572 524 -800 636 480 m2
 port "vssa2" 567 0 549442 1660 554242 m3
-port "io_analog[9]" 46 16194 702300 21194 704800 m3
+port "io_analog[1]" 38 566594 702300 571594 704800 m3
+port "gpio_analog[7]" 15 -800 511530 480 511642 m3
 node "c_n100_n100#" 0 0 -100 -100 comment 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "io_analog[4]" 0 2925 329294 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
 node "io_analog[4]" 0 2925 318994 702300 m5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0
@@ -816,6 +816,9 @@ node "io_in_3v3[12]" 1 613.728 583520 496504 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "io_in[12]" 1 613.728 583520 497686 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_out[12]" 1 613.728 583520 498868 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_oeb[12]" 1 613.728 583520 500050 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
+node "vdda1" 0 6519 582340 540562 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
+node "ii" 1 206.4 57280 549840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76800 2080 0 0 0 0 0 0
+node "vi" 1 206.4 56960 549840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76800 2080 0 0 0 0 0 0
 node "io_oeb[20]" 1 613.728 -800 246488 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_out[20]" 1 613.728 -800 247670 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_in[20]" 1 613.728 -800 248852 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
@@ -857,12 +860,7 @@ node "io_out[14]" 1 613.728 -800 506802 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "io_in[14]" 1 613.728 -800 507984 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_in_3v3[14]" 1 613.728 -800 509166 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "gpio_noesd[7]" 1 613.728 -800 510348 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
-node "gpio_analog[7]" 1 613.728 -800 511530 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
-node "vdda1" 0 6519 582340 540562 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "vdda1" 0 6519 582340 550562 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "ii" 1 206.4 57280 549840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76800 2080 0 0 0 0 0 0
-node "m3_56960_549840#" 1 206.4 56960 549840 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 76800 2080 0 0 0 0 0 0
-node "m3_34720_555600#" 0 67.52 34720 555600 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6400 320 0 0 0 0 0 0
+node "vdda2" 0 172056 0 214888 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 136500800 640160 0 0 0 0 0 0
 node "gpio_analog[6]" 1 613.728 583520 583562 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "gpio_noesd[6]" 1 613.728 583520 584744 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "io_in_3v3[13]" 1 613.728 583520 585926 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
@@ -871,9 +869,15 @@ node "io_out[13]" 1 613.728 583520 588290 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "io_oeb[13]" 1 613.728 583520 589472 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0
 node "vccd1" 0 6519 582340 629784 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "vccd1" 0 6519 582340 639784 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
+node "m3_4800_550000#" 0 164 4800 550000 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 160000 1600 0 0 0 0 0 0
+node "vdda1" 0 103890 582340 550562 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 85156800 382160 0 0 0 0 0 0
 node "io_analog[0]" 0 6825 582300 677984 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
-node "io_analog[1]" 0 6825 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
-node "vssa1" 0 6519 520594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
+node "vssa2" 0 6529.6 0 559442 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11816000 14560 0 0 0 0 0 0
+node "m3_6400_574320#" 0 136.96 6400 574320 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19200 640 0 0 0 0 0 0
+node "vccd2" 0 67524.7 0 633842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46664000 189600 13184000 69440 0 0 0 0
+node "vccd2" 0 6519 0 643842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
+node "io_analog[10]" 0 90047 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 75016800 330320 0 0 0 0 0 0
+node "vssa1" 0 17336.3 520594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19813600 55572 0 0 0 0 0 0
 node "vssa1" 0 6519 510594 702340 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
 node "io_analog[2]" 0 6825 465394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_analog[3]" 0 6825 413394 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
@@ -891,13 +895,7 @@ node "io_clamp_low[2]" 0 3577 170894 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 node "io_analog[6]" 0 6825 165594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_analog[7]" 0 6825 120194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
 node "io_analog[8]" 0 6825 68194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12500000 15000 0 0 0 0 0 0
-node "m3_28400_551600#" 1 4363.04 28400 551600 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2876800 17920 0 0 0 0 0 0
-node "vdda2" 0 220117 0 214888 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 161844800 770080 12432000 63120 0 0 0 0
-node "vssa2" 0 6519 0 559442 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "m3_6400_574320#" 0 136.96 6400 574320 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19200 640 0 0 0 0 0 0
-node "vccd2" 0 6519 0 633842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "vccd2" 0 6519 0 643842 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11808000 14520 0 0 0 0 0 0
-node "io_analog[10]" 0 85636 0 680242 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 71980000 312400 0 0 0 0 0 0
+node "io_analog[9]" 0 6828.18 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 12502400 15012 0 0 0 0 0 0
 node "user_irq[2]" 1 631.648 583250 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[1]" 1 631.648 582068 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "user_irq[0]" 1 631.648 580886 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
@@ -1392,47 +1390,43 @@ node "wbs_cyc_i" 1 631.648 4070 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
 node "wbs_ack_o" 1 631.648 2888 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_rst_i" 1 631.648 1706 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
 node "wb_clk_i" 1 631.648 524 -800 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 143360 2784 0 0 0 0 0 0 0 0
-node "vi" 1 62767.7 2000 550000 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22323200 115040 12900800 37520 22323200 115040 0 0 0 0
-equiv "vi" "vssa2"
-node "vo" 3 1033.04 34240 557120 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 108800 2880 128000 3360 0 0 0 0 0 0
-node "m2_34080_557120#" 0 68.32 34080 557120 m2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6400 320 0 0 0 0 0 0 0 0
-node "io_analog[9]" 30 46953.7 16194 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1510400 38080 24156800 306532 0 0 0 0 0 0
-node "m1_34080_555680#" 37 9571.84 34080 555680 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 217600 10880 499200 14080 505600 14080 1120000 18240 0 0 0 0
-node "m1_21440_702400#" 0 544490 21440 702400 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13107200 655360 32038400 946560 26982400 693120 33548800 984640 0 0 0 0
+node "vssa2" 1 62678.9 0 549442 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22323200 115040 12900800 37520 22323200 115040 0 0 0 0
+node "io_analog[1]" 36 17771.5 566594 702300 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1811200 45440 12793920 22508 0 0 0 0 0 0
+node "gpio_analog[7]" 0 256789 -800 511530 m3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5715200 285760 15795200 433920 16224000 437440 15686400 430720 0 0 0 0
+node "m1_543720_703240#" 0 78515.6 543720 703240 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1804800 90240 4275200 110400 5024000 148160 6080000 155680 0 0 0 0
 substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "vi" "vdda2" 1592
+cap "io_clamp_high[0]" "io_clamp_low[0]" 525
+cap "io_analog[5]" "io_analog[5]" 26250
+cap "io_analog[6]" "io_analog[6]" 26250
+cap "io_analog[6]" "io_analog[6]" 21250
+cap "m3_4800_550000#" "vssa2" 1132
+cap "io_analog[1]" "m1_543720_703240#" 53622.6
 cap "io_clamp_high[1]" "io_analog[5]" 525
-cap "io_analog[5]" "io_analog[5]" 21250
-cap "io_analog[10]" "vdda2" 228
-cap "vi" "m3_56960_549840#" 2611.2
-cap "io_clamp_low[1]" "io_clamp_high[1]" 525
-cap "io_analog[6]" "io_analog[6]" 21250
-cap "io_analog[5]" "io_analog[5]" 26250
-cap "vo" "m1_34080_555680#" 7123.8
 cap "io_clamp_high[0]" "io_analog[4]" 525
-cap "io_analog[9]" "m1_21440_702400#" 456004
-cap "io_analog[5]" "io_clamp_low[1]" 525
-cap "io_analog[6]" "io_analog[6]" 21250
-cap "io_analog[4]" "io_analog[4]" 26250
-cap "io_analog[6]" "io_analog[6]" 26250
-cap "io_clamp_low[0]" "io_clamp_high[0]" 525
-cap "vi" "m3_28400_551600#" 1562
-cap "vi" "ii" 2611.2
-cap "io_analog[4]" "io_analog[4]" 21250
-cap "m2_34080_557120#" "m1_34080_555680#" 174.427
-cap "vdda2" "m3_28400_551600#" 228
-cap "m3_56960_549840#" "ii" 252
 cap "io_analog[4]" "io_clamp_low[0]" 525
-cap "io_clamp_high[2]" "io_analog[6]" 525
-cap "m2_34080_557120#" "vo" 50
-cap "io_analog[6]" "io_analog[6]" 26250
+cap "vi" "ii" 252
+cap "io_clamp_high[1]" "io_clamp_low[1]" 525
 cap "io_analog[4]" "io_analog[4]" 21250
-cap "m3_34720_555600#" "m1_34080_555680#" 21
+cap "gpio_analog[7]" "vssa2" 3960.75
+cap "vssa2" "vccd2" 1703.67
 cap "io_analog[4]" "io_analog[4]" 26250
-cap "io_clamp_low[2]" "io_clamp_high[2]" 525
-cap "io_analog[5]" "io_analog[5]" 21250
+cap "io_clamp_low[1]" "io_analog[5]" 525
 cap "io_analog[5]" "io_analog[5]" 26250
-cap "io_analog[6]" "io_clamp_low[2]" 525
+cap "gpio_analog[7]" "vdda2" 2899.2
+cap "io_clamp_high[2]" "io_clamp_low[2]" 525
+cap "io_clamp_low[2]" "io_analog[6]" 525
+cap "io_clamp_high[2]" "io_analog[6]" 525
+cap "io_analog[5]" "io_analog[5]" 21250
+cap "io_analog[5]" "io_analog[5]" 21250
+cap "io_analog[4]" "io_analog[4]" 26250
+cap "vssa2" "vi" 2611.2
+cap "gpio_analog[7]" "vccd2" 2224.33
+cap "vssa2" "io_analog[10]" 1562
+cap "io_analog[6]" "io_analog[6]" 26250
+cap "io_analog[6]" "io_analog[6]" 21250
+cap "vssa2" "ii" 2611.2
+cap "io_analog[10]" "vccd2" 792
+cap "io_analog[4]" "io_analog[4]" 21250
 subcap "wb_clk_i" -296.744
 subcap "wb_clk_i" -334.904
 subcap "wbs_sel_i[1]" -264.308
@@ -1559,7 +1553,7 @@ subcap "vssd1" -5912.19
 subcap "vssd1" -5992.79
 subcap "vdda2" -6352.88
 subcap "vdda2" -5980
-subcap "vdda2" -219489
+subcap "vdda2" -171428
 subcap "vdda1" -6073.39
 subcap "vdda1" -6153.99
 subcap "gpio_analog[0]" -200.4
@@ -1605,110 +1599,105 @@ subcap "io_in_3v3[12]" -200.4
 subcap "io_in[12]" -200.4
 subcap "io_out[12]" -200.4
 subcap "io_oeb[12]" -200.4
-subcap "gpio_analog[7]" -295.748
-subcap "gpio_analog[7]" -317.98
-cap "sbcs1v8_0/vdda" "sbcs1v8_0/s" 63
+subcap "gpio_analog[7]" -256432
+subcap "gpio_analog[7]" -256493
 cap "sbcs1v8_0/vdda" "sbcs1v8_0/p0" 63
-cap "sbcs1v8_0/vdda" "sbcs1v8_0/p2" 63
-cap "sbcs1v8_0/vdda" "sbcs1v8_0/p1" 63
+cap "sbcs1v8_0/vdda" "sbcs1v8_0/s" 63
+cap "sbcs1v8_0/p2" "sbcs1v8_0/vdda" 63
+cap "sbcs1v8_0/p1" "sbcs1v8_0/vdda" 63
 cap "sbcs1v8_0/vdda" "sbcs1v8_0/s" 9
-cap "sbcs1v8_0/p0" "sbcs1v8_0/vdda" 9
-cap "sbcs1v8_0/vdda" "sbcs1v8_0/p1" 9
-cap "sbcs1v8_0/vdda" "sbcs1v8_0/p2" 9
+cap "sbcs1v8_0/vdda" "sbcs1v8_0/p0" 9
+cap "sbcs1v8_0/p2" "sbcs1v8_0/vdda" 9
+cap "sbcs1v8_0/p1" "sbcs1v8_0/vdda" 9
 subcap "vdda1" -6207.19
-cap "vi" "sbcs1v8_0/vdda" 125
-cap "vi" "sbcs1v8_0/vdda" 167.5
-cap "sbcs1v8_0/vdda" "vi" 212.167
-cap "sbcs1v8_0/vdda" "vi" 158.333
-cap "vi" "sbcs1v8_0/vssa" 156.333
-cap "sbcs1v8_0/vssa" "vi" 116.667
-cap "vi" "sbcs1v8_0/vssa" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_0/vssa" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_0/vssa" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 291.667
-cap "sbcs1v8_0/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 291.667
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "sbcs1v8_0/vssa" "vi" 291.667
+subcap "vssa2" -62033
+cap "vssa2" "sbcs1v8_0/vdda" 125
+cap "vssa2" "sbcs1v8_0/vdda" 167.5
+cap "sbcs1v8_0/vdda" "vssa2" 212.167
+cap "sbcs1v8_0/vssa" "vssa2" 116.667
+cap "vssa2" "sbcs1v8_0/vssa" 156.333
+cap "sbcs1v8_0/vdda" "vssa2" 158.333
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "sbcs1v8_0/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
 cap "sbcs1v8_0/n" "sbcs1v8_0/vssa" 31.5
-cap "vi" "sbcs1v8_0/vssa" 390.833
-cap "vi" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
+cap "vssa2" "sbcs1v8_0/vssa" 390.833
 cap "sbcs1v8_0/io" "sbcs1v8_0/vssa" 4.54747e-13
 cap "sbcs1v8_0/n" "sbcs1v8_0/vssa" 31.5
-cap "sbcs1v8_0/vssa" "vi" 33.5
+cap "vssa2" "sbcs1v8_0/vssa" 33.5
 cap "sbcs1v8_0/vssa" "sbcs1v8_0/io" -5.68434e-14
-cap "sbcs1v8_1/vdda" "vi" 250
-cap "sbcs1v8_1/vdda" "vi" 335
-cap "vi" "sbcs1v8_1/vdda" 33.3333
-cap "vi" "sbcs1v8_1/vssa" 323.833
-cap "vi" "sbcs1v8_1/vssa" 241.667
-cap "sbcs1v8_1/vdda" "vi" 44.6667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "sbcs1v8_1/vssa" "vi" 390.833
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "sbcs1v8_1/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "sbcs1v8_1/vssa" "vi" 291.667
-cap "vi" "sbcs1v8_1/vssa" 390.833
-cap "vi" "sbcs1v8_1/vssa" 291.667
-subcap "m3_56960_549840#" -357.6
-cap "vi" "vref1v8_0/vssa" 390.833
+cap "gpio_analog[7]" "sbcs1v8_1/vdda" -7.10543e-15
+cap "vssa2" "sbcs1v8_1/vdda" 335
+cap "vssa2" "sbcs1v8_1/vdda" 250
+cap "vssa2" "sbcs1v8_1/vssa" 241.667
+cap "sbcs1v8_1/vssa" "vssa2" 323.833
+cap "vssa2" "sbcs1v8_1/vdda" 44.6667
+cap "vssa2" "sbcs1v8_1/vdda" 33.3333
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
+cap "vssa2" "sbcs1v8_1/vssa" 291.667
+cap "sbcs1v8_1/vssa" "vssa2" 390.833
+subcap "vi" -357.6
 cap "vref1v8_0/vssa" "sbcs1v8_1/n" 63
-cap "sbcs1v8_1/vssa" "vref1v8_0/ii" -1.36424e-12
-cap "vi" "sbcs1v8_1/vssa" 256.833
-cap "sbcs1v8_1/vssa" "vref1v8_0/vi" -1.36424e-12
-subcap "vdda1" -6287.79
+cap "vssa2" "vref1v8_0/vssa" 390.833
+cap "sbcs1v8_1/x" "sbcs1v8_1/vssa" -1.36424e-12
+cap "sbcs1v8_1/io" "sbcs1v8_1/vssa" -1.36424e-12
+cap "vssa2" "sbcs1v8_1/vssa" 256.833
+subcap "vdda1" -103659
+cap "vref1v8_0/vssa" "vref1v8_0/vo" 4.26326e-14
+cap "vref1v8_0/vo" "vref1v8_0/n" 63
 cap "vref1v8_0/vssa" "vref1v8_0/vssa" 18
-cap "vref1v8_0/vi" "vref1v8_0/ii" 1.42109e-14
-cap "vref1v8_0/ii" "vref1v8_0/vssa" 126
+cap "vref1v8_0/ii" "vref1v8_0/vi" 1.42109e-14
 cap "vref1v8_0/vi" "vref1v8_0/vssa" 126
-subcap "vdda1" -5954.8
-subcap "m1_34080_555680#" -8826.12
-subcap "m1_34080_555680#" -4858.85
-cap "ESD_0/vssa" "vo" 46
-subcap "vo" -206.4
-subcap "m2_34080_557120#" -69.68
-cap "ESD_0/vssa" "ESD_0/a" 46.4
-cap "ESD_0/vssa" "ESD_0/a" -661.65
-cap "ESD_0/vssa" "ESD_0/b" 46.4
-cap "ESD_0/vdda" "m1_21440_702400#" 50.25
-subcap "vssa2" -5950.17
+cap "vref1v8_0/ii" "vref1v8_0/vssa" 126
+subcap "vdda1" -103326
+subcap "vssa2" -5960.77
 subcap "gpio_analog[6]" -200.4
 subcap "gpio_noesd[6]" -200.4
 subcap "io_in_3v3[13]" -200.4
@@ -1717,13 +1706,19 @@ subcap "io_in[13]" -423.948
 subcap "io_out[13]" -200.4
 subcap "io_oeb[13]" -200.4
 subcap "vccd1" -6054.85
-subcap "vccd2" -6027.17
+subcap "vccd2" -67032.9
 subcap "vccd1" -6135.45
 subcap "vccd2" -6104.17
+cap "sbcs5v0_0/vdda" "sbcs5v0_0/s" 63
+cap "sbcs5v0_0/p0" "sbcs5v0_0/vdda" 63
 subcap "io_analog[0]" -6591.86
 subcap "io_analog[0]" -6244
-subcap "io_analog[10]" -85221.2
-subcap "io_analog[9]" -46083
+subcap "io_analog[10]" -89632.2
+cap "sbcs5v0_0/io" "sbcs5v0_0/vssa" 2.84217e-14
+cap "sbcs5v0_0/n" "sbcs5v0_0/vssa" 126
+cap "sbcs5v0_0/vssa" "sbcs5v0_0/z" 63
+cap "sbcs5v0_0/io" "sbcs5v0_0/vssa" 1.36424e-12
+subcap "io_analog[9]" -5957.47
 subcap "io_analog[8]" -6061.29
 subcap "io_analog[7]" -6168.29
 subcap "io_analog[6]" -2670.33
@@ -1765,24 +1760,23 @@ subcap "io_analog[3]" -6076
 subcap "io_analog[2]" -6596.29
 subcap "io_analog[2]" -6076
 subcap "vssa1" -5775.56
-subcap "vssa1" -5880.16
-subcap "io_analog[1]" -6061.29
-merge "sbcs1v8_1/io" "vref1v8_0/ii" -98.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -480 0 0 0 0 0 0
-merge "vref1v8_0/ii" "ii"
-merge "ESD_0/vssa" "vref1v8_0/vssa" -5845.07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1112420 -6002 -1131182 -6033 -1272068 -6882 -1085642 -6995 0 0 0 0
-merge "vref1v8_0/vssa" "sbcs1v8_1/vssa"
+subcap "vssa1" -16697.5
+subcap "io_analog[1]" -17007.8
+merge "sbcs5v0_0/vdda" "vdda1" -583.01 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -138000 -2642 0 0 0 0 0 0
+merge "vref1v8_0/ii" "sbcs1v8_1/io" -98.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -480 0 0 0 0 0 0
+merge "sbcs1v8_1/io" "ii"
+merge "sbcs5v0_0/vssa" "vref1v8_0/vo" -13219.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 320000 0 -24195320 -29840 322560 0 0 0 0 0
+merge "vref1v8_0/vo" "vref1v8_0/vssa"
+merge "vref1v8_0/vssa" "gpio_analog[7]"
+merge "gpio_analog[7]" "sbcs1v8_1/vssa"
 merge "sbcs1v8_1/vssa" "sbcs1v8_0/vssa"
 merge "sbcs1v8_0/vssa" "VSUBS"
-merge "VSUBS" "vi"
-merge "vi" "m1_34080_555680#"
-merge "m1_34080_555680#" "m3_34720_555600#"
-merge "m3_34720_555600#" "m1_21440_702400#"
-merge "ESD_0/vdda" "sbcs1v8_1/vdda" -19221.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 9503635 -106412 -166800 -1040 0 0 0 0
-merge "sbcs1v8_1/vdda" "sbcs1v8_0/vdda"
-merge "sbcs1v8_0/vdda" "vdda2"
-merge "sbcs1v8_1/x" "vref1v8_0/vi" -98.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -480 0 0 0 0 0 0
-merge "vref1v8_0/vi" "m3_56960_549840#"
-merge "ESD_0/b" "io_analog[9]" -6845.59 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 28720 -160 -12500000 -15000 0 0 0 0 0 0
-merge "ESD_0/a" "vref1v8_0/vo" -353.438 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -320 -79960 -2642 0 0 0 0 0 0
-merge "vref1v8_0/vo" "vo"
-merge "sbcs1v8_0/io" "m3_28400_551600#" -32.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -160 0 0 0 0 0 0
+merge "VSUBS" "vssa2"
+merge "vssa2" "vssa1"
+merge "vssa1" "m1_543720_703240#"
+merge "sbcs1v8_0/vdda" "vdda2" -771.67 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 271800 -4162 0 0 0 0 0 0
+merge "sbcs1v8_1/vdda" "vccd2" -10502.7 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15936000 -25840 -1383744 -800 0 0 0 0
+merge "vref1v8_0/vi" "sbcs1v8_1/x" -98.4 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -480 0 0 0 0 0 0
+merge "sbcs1v8_1/x" "vi"
+merge "sbcs1v8_0/io" "io_analog[10]" -5329.8 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8500000 -13560 0 0 0 0 0 0
+merge "sbcs5v0_0/io" "io_analog[1]" -6890.6 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -12500000 -15320 0 0 0 0 0 0
