@@ -16,14 +16,18 @@ Table of contents
 Summary
 =======
 
-A resistorless self-biased current source based on [1] using series-parallel current mirrors [2]
+Most, if not all, analog integrated circuits are limited by their reference voltage and current sources. This project aims to provide a current source reference with the lowest power consumption and supply voltage possible for this technology.
+
+A conventional gm-constant self-biased current source uses integrated resistors, which can be very large for very low current consumption. Besides that, the integrated resistor creates another independent variable of process variability in addition to the active components. A CMOS only current source process variability is a function of only the active components.
+
+The proposed self-biased current source is based on the topology introduced by Francisco Serra-Graells and Jose Luis Huertas in "Sub-1-V CMOS proportional-to-absolute temperature references" [1], with the addition of high-swing cascode and series-parallel current mirrors [2].
 
 ### Target Performance Summary
 
 | Specifications        | -                            |
 | :---                  | :---                         |
 | VDD                   | 1.0-1.8 V                    |
-| Total current         | 3.50 &mu;A                   |
+| Total current         | 3.60 &mu;A                   |
 | Output current        | 0.27 &mu;A                   |
 | Temperature stability | 0.5 %/V                      |
 | Supply stability      | 1160 ppm/°C                  |
